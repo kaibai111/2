@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.egg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2a0f1a;
+}
+
+.nergigante-egg {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: 
+    radial-gradient(circle at 50% 30%, 
+      #1a1a1a 20%,
+      #3a3a3a 40%,
+      #2a2a2a 70%),
+    linear-gradient(45deg, 
+      #4a0000 25%,
+      #6a0f0f 50%,
+      #4a0000 75%);
+  box-shadow: 
+    0 0 50px #6a0f0f,
+    inset 0 0 30px rgba(106,15,15,0.5);
+  animation: pulse 2s infinite;
+}
+
+/* 尖刺效果 */
+.egg-spike {
+  position: absolute;
+  width: 8px;
+  height: 30px;
+  background: #3a3a3a;
+  border-radius: 50%;
+  transform-origin: bottom;
+}
+
+.egg-spike::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #6a0f0f;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* 能量核心效果 */
+.core-glow {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(200,40,40,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(15px);
+  animation: core-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(0.98); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes core-pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+/* 生成尖刺布局 */
+.egg-spike:nth-child(1) { left: 15%; top: 20%; transform: rotate(-20deg); }
+.egg-spike:nth-child(2) { right: 15%; top: 25%; transform: rotate(25deg); }
+.egg-spike:nth-child(3) { left: 30%; bottom: 30%; transform: rotate(40deg); }
+.egg-spike:nth-child(4) { right: 30%; bottom: 25%; transform: rotate(-35deg); }
+</style>
+</head>
+<body>
+<div class="egg-container">
+  <div class="nergigante-egg">
+    <div class="core-glow"></div>
+    <div class="egg-spike"></div>
+    <div class="egg-spike"></div>
+    <div class="egg-spike"></div>
+    <div class="egg-spike"></div>
+  </div>
+</div>
+</body>
+</html>
