@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怪物猎人荒野-官方预约站</title>
+    <style>
+        /* 基础样式 */
+         body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            color: #ffd700;
+            margin: 0;
+            padding: 10px;
+            /* 新增背景设置 */
+             background: 
+               linear-gradient(rgba(26,26,26,0.85), rgba(26,26,26,0.85)),
+               url('https://img.3dmgame.com/uploads/images/news/20241101/1730439391_836415.jpg') center/cover fixed;
+           transition: background 0.5s ease;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px solid #ff4500;
+            border-radius: 15px;
+            padding: 20px;
+            background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+        }
+
+        /* 标题特效 */
+        .title {
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff0000;
+            margin: 20px 0;
+            animation: blink 1.5s infinite;
+        }
+
+        /* 关键信息样式 */
+        .highlight {
+            color: #ff1493;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* 预约按钮 */
+        .cta-button {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background: #ff4500;
+            color: white;
+            text-align: center;
+            border-radius: 25px;
+            font-size: 1.5em;
+            text-decoration: none;
+            border: 2px solid #ffd700;
+        }
+
+        /* 武器列表 */
+        .weapon-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .weapon-item {
+            flex: 1 1 200px;
+            padding: 10px;
+            border: 2px dashed #00ff00;
+            text-align: center;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+        background-attachment: scroll; /* 取消固定背景 */
+        background-size: auto 100%; /* 垂直适配 */
+            }
+            .title {
+                font-size: 1.8em;
+            }
+            .cta-button {
+                width: 95%;
+                font-size: 1.2em;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🔥怪物猎人荒野⚡全球首发</h1>
+        
+        <div class="highlight">【24小时倒计时】全球3000万猎人集结！</div>
+        
+        <a href="#" class="cta-button">⭐立即预约送灭尽龙幼崽⭐</a>
+
+        <section>
+            <h2>🎮九大革新体验：</h2>
+            <ul>
+                <li>400KM²无缝开放世界</li>
+                <li>动态生态狩猎系统</li>
+                <li>16人跨平台联机</li>
+            </ul>
+        </section>
+
+        <div class="weapon-list">
+            <div class="weapon-item">⚡雷神双刀</div>
+            <div class="weapon-item">❄霜巨人重弩</div>
+            <div class="weapon-item">🌪飓风斩斧</div>
+        </div>
+
+        <section>
+            <h3>🎁地区特典：</h3>
+            <p>🇨🇳 麒麟旗袍+火锅猫饭</p>
+            <p>🇯🇵 武士刀+和风庭院</p>
+        </section>
+
+        <footer>
+            <p>⚠ 官方授权平台：Steam/PS5/Xbox</p>
+            <p>©CAPCOM CO., LTD. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+</body>
+</html>
